@@ -967,6 +967,31 @@ button.animated-border:hover {
     top: 0;
 }
 
+
+@media screen and (max-width: 768px) {
+    .matukio-container {
+        min-height: 100vh; /* Inajaza urefu wa screen */
+        width: 20vw; /* Inajaza upana wote wa screen */
+        padding: 0; /* Hakuna nafasi za ndani */
+        margin: 0; /* Hakuna nafasi za nje */
+        display: grid;
+        grid-template-columns: 1fr; /* Inahakikisha box zinakaa vizuri */
+        gap: 1; /* Hakuna nafasi kati ya box */
+    }
+
+    .matukio {
+        width: 100vw; /* Inajaza upana wote bila nafasi pembeni */
+        min-height: 15vh; /* Inajaza urefu wa screen */
+        margin: 0; /* Hakuna nafasi pembeni */
+        border-radius: 2; /* Hakuna kona za mviringo */
+        box-shadow: none; /* Hakuna kivuli */
+        text-align: left; /* Maandishi yanabaki kushoto kama kawaida */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .news-title {
     color: rgb(255, 0, 0);
     font-size: 2em;
