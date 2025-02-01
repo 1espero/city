@@ -1,0 +1,1092 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #01060c;
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+.menu {
+    background-color: #cd2c2c29;
+    overflow: hidden;
+}
+.menu a {
+    float: left ;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu a:hover {
+    background-color: #0c4203;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a {
+        float: none;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+}
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background-color: rgba(248, 38, 10, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 80px;
+    display: inline-block;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+
+
+/* Mtindo wa saa */
+.clock-container {
+    position: fixed;
+    top: 10px; /* Nafasi ya juu */
+    right: 10px; /* Nafasi ya kulia */
+ 
+    padding: 10px 20px;
+    border: 2px solid #333; /* Mstari wa kisanduku */
+    border-radius: 8px; /* Kona za duara */
+    font-family: Arial, sans-serif;
+    color: #f3e9e9; /* Rangi ya maandishi */
+    font-size: 18px;
+    z-index: 1000; /* Hakikisha iko juu ya kila kitu */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Kivuli */
+    text-align: center; /* Maandishi ya katikati */
+}
+
+.format-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 16px; /* Ukubwa wa mshale */
+    cursor: pointer;
+    color: #333; /* Rangi ya mshale */
+    
+    border: 2px solid #1af40a; /* Mstari wa duara */
+    border-radius: 50%; /* Fanya duara */
+    margin: 10px auto 0; /* Kuweka katikati */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.format-icon:hover {
+    background-color: #ff0000; /* Rangi ya bluu unapobofya */
+    color: #fff; /* Rangi ya mshale unapobofya */
+    transform: scale(1.1); /* Punguza au ongeza kidogo mshale */
+}
+
+
+
+
+/* Slideshow and Principal Info Section */
+.slideshow-principal-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.slideshow-container {
+    width: 55%;
+    margin-right: 20px;
+}
+
+.principal-info {
+    width: 40%;
+}
+
+.principal-box {
+    background: rgba(120, 17, 17, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(132, 13, 13, 0.8);
+    text-align: center;
+}
+
+.principal-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Slideshow Styles */
+.slideshow {
+    position: relative;
+    max-width: 100%;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+/* Courses Section */
+.courses-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.courses-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+
+
+.course-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+ .course-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.course-link:hover {
+    background-color: #0056b3;
+}
+/* Contact Info */
+.contact-info {
+    background-color: rgba(6, 1, 11, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+}
+.coz-info {
+    background-color: rgba(32, 159, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+    .slideshow-principal-container {
+        flex-direction: column;
+    }
+
+    .slideshow-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .principal-info {
+        width: 100%;
+    }
+
+
+
+}
+
+@media (max-width: 768px) { /* Kwa skrini ndogo (chini ya 768px) */
+    .courses-container {
+        grid-template-columns: 1fr; /* Vibox vyote vitachukua safu moja */
+        padding: 0 10px;
+        justify-items: center; /* Panga vibox katikati kwa usawa */
+        width: 100%; /* Ensure full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between boxes */
+    }
+
+    .course-box {
+        max-width: 100%; /* Hakikisha vibox havizidi skrini ya simu */
+        width: 100%; /* Ensure full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between boxes */
+    }
+}
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* Fade effect for the slideshow */
+.slide {
+    width: 100%;
+    display: none;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slide.fade {
+    opacity: 1;
+    display: block !important;
+}
+
+/* Optional: Make the slideshow container more visually appealing */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+/* General Button Styles */
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+/* Glowing Animation */
+button.glow {
+    background-color: #007bff;  /* Initial button color */
+    animation: glow 3s infinite; /* 3-second animation loop */
+}
+
+/* Keyframes for color-changing glow effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+        background-color: #007bff;
+    }
+    25% {
+        box-shadow: 0 0 10px #28a745, 0 0 20px #28a745, 0 0 30px #28a745;
+        background-color: #28a745;
+    }
+    50% {
+        box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 30px #ffc107;
+        background-color: #ffc107;
+    }
+    75% {
+        box-shadow: 0 0 10px #dc3545, 0 0 20px #dc3545, 0 0 30px #dc3545;
+        background-color: #dc3545;
+    }
+    100% {
+        box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+        background-color: #007bff;
+    }
+}
+
+/* Optional: Hover Effect to Intensify Glow */
+button.glow:hover {
+    box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff, 0 0 45px #ffffff;
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+
+
+
+
+
+.dancing-script-style {
+    font-family: "Dancing Script", cursive; /* Font ya Dancing Script */
+    font-weight: 700; /* Uzito wa fonti */
+    font-size: 45px; /* Ukubwa wa fonti */
+    color: rgb(12, 170, 15); /* Rangi ya maandishi */
+    text-shadow: 1px 1px 0 black, /* Kivuli cha mstari mweusi */
+                 -1px 1px 0 black,
+                 1px -1px 0 black,
+                 -1px -1px 0 black;
+    text-align: center; /* Maandishi katikati */
+    margin: 20px auto; /* Nafasi juu na chini, maandishi katikati */
+}
+
+
+
+
+
+
+
+/* General Button Styles */
+button {
+    padding: 12px 33px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border: 3px solid transparent; /* Border to hold color animation */
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    background-color: #8f270d; /* Initial button color */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animated Border Effect */
+button.animated-border {
+    animation: borderColorChange 3s infinite; /* 3-second loop for border color change */
+}
+
+/* Keyframes for color-changing border */
+@keyframes borderColorChange {
+    0% {
+        border-color: #eb30f1;
+        background-color: #9d0ea4;
+    }
+    
+}
+
+/* Optional: Hover Effect to Intensify */
+button.animated-border:hover {
+    color: #007bff;
+    background-color: white;
+}
+
+
+
+
+/*picha ya button*/
+/* Additional styles for the extra content section */
+#moreText {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #e9e5e5;
+}
+
+
+/* environment containner */
+.headpitchure  {
+    background-color: rgba(83, 189, 30, 0);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: rgba(15, 1, 1, 0.929);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+
+
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slideshow {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+
+/* Animation when a slide becomes active */
+.slide.active {
+    display: block;
+    opacity: 1;
+    animation:   zoomIn 2.9s 0s ease-in-out ;
+}
+
+/* Slide-in animation from the right */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.001);
+    }
+    to {
+        transform: scale(1);
+    }
+    
+}
+
+/* Optional: Adding a slide-out animation for transitions */
+@keyframes slideOut {
+    from {
+        transform: translateX(1);
+    }
+    to {
+        transform: translateX(-100);
+    }
+}
+
+@keyframes slideOu {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Add a fade effect */
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Optional: You can add other animations as needed */
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+.footer {
+    background: rgba(16, 23, 16, 0.5);
+    color: #ffffff;
+
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-section {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+
+    color: #aaa;
+}
+
+.footer-section ul {
+    list-style: none;
+    text-align: center;
+    text-align: center;
+    padding: 0;
+}
+
+.footer-section ul li {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    left: 100px;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    left: 100px;
+  
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+.star-icon {
+    color: #00ff00;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+
+
+
+
+/* Huu ni mtindo wa kawaida unaoonekana kwenye kompyuta */
+.footer {
+    display: block;
+}
+
+.contact-info {
+    display: none;
+}
+
+/* Media query kwa ajili ya watumiaji wa simu */
+@media only screen and (max-width: 768px) {
+    .footer {
+        display: none;
+    }
+
+    .contact-info {
+        display: block;
+    }
+}
+
+
+
+
+
+
+.header {
+    background: #8b0000;
+    color: rgb(8, 188, 32);
+    text-align: center;
+    padding: 28px 10px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.header h2 {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+
+
+/* Muonekano wa kawaida kwa PC */
+.header-content {
+    display: block; /* Onyesha kwa PC */
+}
+
+.header {
+    display: none; /* Hakikisha header inaonekana kwa simu */
+}
+
+/* Muonekano wa simu */
+@media only screen and (max-width: 768px) {
+    .header-content {
+        display: none; /* Ficha content kwa simu */
+    }
+
+    .header {
+        display: block; /* Hakikisha header inaonekana kwa simu */
+    }
+}
+
+
+
+
+/* Individual course box */
+.course-box {
+    width: 100%; /* Adjust to full width */
+    max-width: 300px; /* Optional: set a maximum width for larger screens */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(162, 14, 14, 0.741);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensures padding and borders are included in the total width/height */
+}
+
+.course-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(206, 18, 18, 0.696);
+}
+
+/* Course title */
+.course-box h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+/* Course description */
+.course-box p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 15px;
+}
+
+/* Link inside the course box */
+.course-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.course-link:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .course-box {
+        width: 100%; /* Ensure full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between boxes */
+    }
+}
+
+
+
+/* Hide elements for mobile users */
+@media (max-width: 768px) {
+    .footer,
+    .clock-container,
+    .background-video {
+        display: none !important; /* Ensure elements are hidden */
+    }
+}
+
+.clock-container {
+    display: block;
+}
+
+
+/*comments section*/
+
+/* Hakikisha body na html zinachukua 100% ya urefu na upana wa ukurasa */
+
+
+/* Maelezo ya kisanduku cha comment */
+.comment-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    background-color: #0b6e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+.comment-box {
+    position: absolute;
+    width: 80%;
+    padding: 20px;
+    background-color: #ed1515;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.comment-box.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.comment-box.exit {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.comment {
+    font-size: 16px;
+    color: #f6eeee;
+    margin: 10px 0;
+}
+
+.student-name {
+    font-size: 14px;
+    color: #0f0101;
+    text-align: right;
+}
+
+
+.button {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #991b05;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* Mpangilio kwa watumiaji wa PC (Skrini kubwa) */
+@media (min-width: 769px) {
+    /* Ficha kisanduku kwa watumiaji wa PC */
+    .comment-container {
+        display: none; /* Kisanduku kitatoweka kwa watumiaji wa PC */
+    }
+
+    /* Amri za block kwa watumiaji wa PC */
+    .pc-only {
+        display: block; /* Hii itafanya vitu vya PC kuonekana */
+    }
+
+    /* Mfano wa block kwa sehemu nyingine za PC */
+    .pc-content {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+    }
+}
+
+/* Mpangilio kwa watumiaji wa Simu (Skrini ndogo) */
+@media (max-width: 768px) {
+    /* Ficha vitu vya PC kwa watumiaji wa simu */
+    .pc-only {
+        display: none; /* Hii itaficha sehemu za PC kwa watumiaji wa simu */
+    }
+
+    /* Amri za block kwa watumiaji wa Simu */
+    .mobile-only {
+        display: block; /* Hii itafanya vitu vya simu kuonekana */
+    }
+
+    /* Mfano wa block kwa sehemu ya simu */
+    .mobile-content {
+        background-color: #17dc1d;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    /* Kisanduku cha comment kitakuwa katikati kwa watumiaji wa simu */
+    .comment-container {
+        width: 90%; /* Kisanduku kitachukua 90% ya upana wa kifaa cha mtumiaji */
+        margin: 0 auto; /* Hii itafanya kisanduku kuwa katikati */
+        display: flex; /* Hakikisha kisanduku kinajitokeza kwa simu */
+        justify-content: center; /* Kisanduku kitakuwa katikati kwa mwelekeo wa usawa */
+        align-items: center; /* Kisanduku kitakuwa katikati kwa mwelekeo wa wima */
+    }
+}
+
+
+
+
+
+
+#matukio-mapya {
+    text-align: center;
+    margin: 20px;
+}
+
+.matukio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    padding: 20px;
+    max-width: none;
+    margin-left: 0; /* Badilisha kutoka 'auto' */
+}
+
+
+.matukio {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.matukio h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.matukio p {
+    color: #555;
+    margin: 0;
+}
+
+.matukio::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 20px 0;
+}
+
+.matukio:last-child::after {
+    display: none;
+}
+
+.matukio:hover {
+    background-color: #fa9797;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+.matukio::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background-color: #034b08;
+    left: 0;
+    top: 0;
+}
+
+.news-title {
+    color: rgb(255, 0, 0);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+  /* Muundo wa mwili wa ukurasa */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sehemu ya kichwa cha ukurasa */
+.navbar {
+   
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Muundo wa alama ya mistari mitatu (hamburger) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Sehemu ya menu */
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+ /* Muundo wa menu kwa simu */
+ @media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #870e0e;
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #6a5656;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+  /* Muundo wa sehemu ya translator */
+  #translate_container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+/* Muundo wa icon ya translator */
+#translate_icon {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sehemu ya lugha inayoonekana baada ya kubofya */
+#language_options {
+    display: none;
+    flex-direction: column;
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Muundo wa kila lugha */
+.translate-option {
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Kuondoa mstari kwenye lugha ya mwisho */
+.translate-option:last-child {
+    border-bottom: none;
+}
+
+/* Kubadilisha rangi lugha inapobonyezwa */
+.translate-option:hover {
+    background-color: darkgreen;
+}
