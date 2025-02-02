@@ -1038,7 +1038,7 @@ button.animated-border:hover {
     display: block;
 }
  /* Muundo wa menu kwa simu */
- @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
     .menu {
         display: none;
         flex-direction: column;
@@ -1053,6 +1053,7 @@ button.animated-border:hover {
         text-align: center;
         padding: 15px;
         border-top: 1px solid #6a5656;
+        display: block;
     }
 
     .menu-icon {
