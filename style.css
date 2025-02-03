@@ -905,7 +905,7 @@ button.animated-border:hover {
 
 #matukio-mapya {
     text-align: center;
-    margin: 20px;
+    margin: 0px;
 }
 
 .matukio-container {
@@ -970,7 +970,7 @@ button.animated-border:hover {
 
 @media screen and (max-width: 768px) {
     .matukio-container {
-        min-height: 100vh; /* Inajaza urefu wa screen */
+        min-height: 95vh; /* Inajaza urefu wa screen */
         width: 20vw; /* Inajaza upana wote wa screen */
         padding: 0; /* Hakuna nafasi za ndani */
         margin: 0; /* Hakuna nafasi za nje */
